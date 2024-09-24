@@ -5,10 +5,9 @@ from langchain.schema import Document
 #from langchain.embeddings import OpenAIEmbeddings
 #from langchain_community.embeddings import OpenAIEmbeddings
 #from openai.embeddings_utils import OpenAIEmbeddings
-#from langchain_community.vectorstores import Chroma
+from langchain_community.vectorstores import Chroma
 from langchain_openai import OpenAIEmbeddings
-from langchain.vectorstores import Chroma
-
+#from langchain.vectorstores import Chroma
 import openai 
 from dotenv import load_dotenv
 import os
@@ -31,15 +30,11 @@ DATA_PATH = "data/books"
 def main():
     generate_data_store()
 
-
 def generate_data_store():
     print("start \n")
     documents = load_documents()
-    print("\n finish load_documents \n")
     chunks = split_text(documents)
-    print("\n finish split_text \n")
     save_to_chroma(chunks)
-    print("\n finish all \n")
     
 
 
@@ -84,7 +79,7 @@ def save_to_chroma(chunks: list[Document]):
     )
     
     # Persist the Chroma database.
-    db.persist()
+    #db.persist()
     print(f"Saved {len(chunks)} chunks to {CHROMA_PATH}.")
 
 if __name__ == "__main__":
