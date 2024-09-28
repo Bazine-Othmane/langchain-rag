@@ -18,8 +18,8 @@ import shutil
 # Change environment variable name from "OPENAI_API_KEY" to the name given in 
 # your .env file.
 
-load_dotenv()
-genai.configure(api_key=os.environ['GOOGLE_API_KEY'])
+#load_dotenv()
+#genai.configure(api_key=os.environ['GOOGLE_API_KEY'])
 
 CHROMA_PATH = "chroma_gimini"
 DATA_PATH = "data/books"

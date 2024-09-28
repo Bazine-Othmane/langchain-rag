@@ -20,8 +20,8 @@ import shutil
 # Change environment variable name from "OPENAI_API_KEY" to the name given in 
 # your .env file.
 
-load_dotenv()
-openai.api_key = os.environ['OPENAI_API_KEY']
+#load_dotenv()
+#openai.api_key = os.environ['OPENAI_API_KEY']
 
 CHROMA_PATH = "chroma"
 DATA_PATH = "data/books"
